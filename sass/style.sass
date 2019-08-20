@@ -1,0 +1,575 @@
+@import "font-Bebas"
+@import "colors"
+
+body,h1,h2,h3,h4,h5,h5,p,ul,a
+ margin: 0
+ padding: 0
+ text-decoration: none
+
+html
+ font-size: 10px
+
+body
+ background: url(../img/bg.png)
+ font-family: 'Bebas'
+ overflow-x: hidden
+ overflow-y: scroll
+
+.right-line
+ right: 0
+
+.map
+ height: 400px
+
+.logo
+ font-size: 36px
+ font-weight: bolder
+ text-transform: uppercase
+ color: $orange
+ display: inline-block
+ padding: 20px 0
+ &:hover
+  span
+   color: $orange
+ span
+  color: $purp
+  transition: .2s ease-in-out
+nav
+ height: 100%
+ display: flex
+ justify-content: flex-end
+ align-items: center
+ .humb
+  margin-top: 1rem
+  padding: 7px 0
+  cursor: pointer
+  perspective: 900
+  span
+   display: block
+   width: 20px
+   height: 2px
+   background: $grey-text
+   transition: background-color .3s, transform 0.2s ease-in-out
+   &:after, &:before
+    content: ''
+    display: block
+    width: 20px
+    height: 2px
+    background: $grey-text
+    transition: transform .2s ease-in-out
+   &:after
+    transform: translateY(3px)
+   &:before
+    transform: translateY(-5px)
+ ul
+  height: 100%
+  display: flex
+  align-items: center
+  list-style: none
+  .active
+   a
+    color: $orange
+  li
+   padding-top: 1rem
+   a
+    text-transform: uppercase
+    font-size: 16px
+    color: $grey-text
+    margin-left: 2.4rem
+    padding: 0.3rem
+    transition: color .2s ease-in, font-size .1s
+    &:hover
+     color: $orange
+main
+ display: flex
+ position: relative
+ overflow: hidden
+ .main-container
+  background-color: $orange
+  height: 6.2rem
+  display: flex
+  align-items: center
+  padding-left: 2rem
+  h1
+   font-size: 2.4rem
+   color: $white
+   font-weight: normal
+ .line
+  height: 6.2rem
+  background-color: $purp
+  position: absolute
+ .window
+  height: 42.4rem
+  display: flex
+  align-items: flex-end
+  padding: 3.6rem 3.2rem
+ .slide
+  .image
+   margin-top: 2.5rem
+   img
+    width: 100%
+  .inform
+   padding: 2.4rem 2rem
+   color: $white
+   max-width: 41.4rem
+   background-color: rgba($orange, 0.8)
+   h2
+    font-size: 1.8rem
+    margin-bottom: 2.2rem
+   p
+    font-size: 1.2rem
+    font-family: 'Helvetica'
+ .owl-nav
+  margin: 0 !important
+  position: absolute
+  top: 17.7rem
+  left: 0
+  width: 100%
+  display: flex !important
+  justify-content: space-between
+  height: 0
+ .owl-prev, .owl-next
+  margin: 0 20px !important
+  span
+   display: none
+ .owl-prev:after
+  content: '\f104'
+  font-family: "Font Awesome 5 Pro"
+  font-weight: 700
+  color: $white
+  display: block
+  font-size: 6rem
+  opacity: 0.9
+  transition: .2s ease-in-out
+ .owl-next:after
+  content: '\f104'
+  font-family: "Font Awesome 5 Pro"
+  font-weight: 700
+  color: $white
+  display: block
+  font-size: 6rem
+  transform: rotate(180deg)
+  opacity: 0.9
+  transition: .2s ease-in-out
+ .owl-prev
+  &:focus
+   outline: 0
+  &:hover
+   &:after
+    opacity: 0.7
+    color: #f6f6f6
+ .owl-next
+  &:focus
+   outline: 0
+  &:hover
+   &:after
+    opacity: 0.7
+    color: #f6f6f6
+
+.features
+ &-card
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%
+ .head
+  display: flex
+  margin: 4.4rem 0 4rem 0
+  a
+   transition: color .2s
+  &:hover
+   a
+    color: $grey
+  .headline
+   color: $orange
+   h3
+    font-size: 2.8rem
+    font-weight: bolder
+  .icon
+   color: $orange
+   font-size: 5.7rem
+   padding-right: 2rem
+ .description
+  font-family: 'Helvetica'
+  font-size: 1.2rem
+  color: $text
+ .more
+  font-size: 12px
+  color: $white
+  display: inline-block
+  background-color: $orange
+  padding: 1rem 1.4rem
+  margin-top: 2rem
+  margin-bottom: 4.6rem
+  transition: background-color .2s
+  &:hover
+   background-color: $grey
+
+.recent
+ h2
+  font-size: 2rem
+  font-weight: normal
+ .filter
+  ul
+   list-style: none
+   padding: 0
+   display: flex
+   margin-bottom: 1.1rem
+   margin-top: 3.5rem
+   li
+    margin-right: 5px
+    a
+     display: flex
+     justify-content: center
+     align-items: center
+     padding: 7px 12px
+     color: $grey-text
+     font-size: 14px
+     transition: .2s ease-in
+     &:hover
+      background-color: $orange
+      color: $white
+  &-active
+   background-color: $orange
+   color: $white !important
+ .portfolio-card
+  border: 1px solid $grey
+  margin-top: 2.4rem
+  margin-bottom: 4.6rem
+  &__inform
+   padding: 13px
+   background-color: $white
+   h3
+    color: $grey-text
+    font-size: 16px
+    margin-bottom: 7px
+    transition: .2s ease-in-out
+    display: inline-block
+    font-weight: bolder
+   p
+    color: $orange
+    font-size: 11px
+    display: inline-block
+  &__image
+   position: relative
+   &:hover
+    .portfolio-card__image-window
+     opacity: 1
+   &-window
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(0,0,0,0.75)
+    opacity: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: opacity .3s ease-in-out
+    a
+     line-height: 20px
+     font-size: 60px
+     font-weight: bolder
+     color: rgba(0,0,0, 0.75)
+     background: rgba($white, 0.7)
+     display: flex
+     justify-content: center
+     align-items: center
+     width: 37px
+     height: 37px
+     padding-bottom: 5px
+   img
+    width: 100%
+    margin-top: -1px
+
+.subtitle
+ background: url(../img/header/Line.png) repeat center center
+ h1, h2, h3, h4, h5
+  color: $orange
+  background: url(../img/bg.png)
+  padding-right: 2rem
+  display: inline-block
+
+footer
+ position: relative
+ display: flex
+ overflow: hidden
+ color: $white
+ .footer-column
+  margin: 3.9rem 0 3.4rem
+ .footer-container
+  background-color: $orange
+  padding: 0 3.6rem
+ .line
+  height: 100%
+  background-color: $purp
+  position: absolute
+ h3
+  font-size: 20px
+  font-weight: normal
+  margin-bottom: 2.8rem
+ .content
+  font-family: 'Helvetica'
+  font-size: 12px
+  a:hover
+   text-decoration: underline
+  p
+   margin-bottom: 1.7rem
+  &-comment
+   &__time
+    display: block
+    margin-top: 0.9rem
+   &__name, &__time
+    color: $footer-text
+  .twitter-link
+   a
+    color: $footer-text
+  &-social
+   a
+    font-size: 22px
+    margin: 0 5px
+    transition: .2s ease-in-out
+   .twitter
+    color: #55acee
+    &:hover
+     text-shadow: 0 0 5px #55acee
+   .facebook
+    color: #3b5999
+    &:hover
+     text-shadow: 0 0 5px #3b5999
+   .vk
+    color: #4c75a3
+    &:hover
+     text-shadow: 0 0 5px #4c75a3
+   .instagram
+    color: #ffdc7d
+    &:hover
+     text-shadow: 0 0 5px #ffdc7d
+   .linkedin
+    color: #0077B5 
+    &:hover
+     text-shadow: 0 0 5px #0077B5
+
+.state
+ margin-bottom: 5rem
+ &__image
+  display: block
+  width: 100%
+  margin: 24px 0
+ &__text
+  p
+   margin-bottom: 2.4rem
+   font-family: 'Helvetica'
+   font-size: 1.2rem
+   color: $text
+
+.layout
+ margin-bottom: 3.8rem
+ &__about
+  font-family: 'Helvetica'
+  font-size: 1.2rem
+  line-height: 1.8rem
+  font-weight: medium
+  padding-right: 3.3rem
+  .alert
+   border: 1px solid #000
+   height: 6rem
+   display: flex
+   justify-content: center
+   align-items: center
+  .alert-green
+   border-color: #98c601
+   color: #98c601
+   background-color: #effeb9
+  .alert-red
+   border-color: #eb5439
+   color: #eb5439
+   background-color: #fbcbc1
+  .alert-orange
+   border-color: #fab418
+   color: #fab418
+   background-color: #ffe9ad
+  .alert-blue
+   border-color: #4d8fcb
+   color: #4d8fcb
+   background-color: #d1e4f3
+  &-between
+   display: flex
+   justify-content: space-between
+   margin: 0 -1rem
+   p
+    margin: 0 1rem
+  .img-text
+   display: block
+   min-height: 221px
+   img
+    margin-right: 2.3rem
+    width: 222px
+    height: 221px
+    float: left
+  &-paragraph_d
+   span
+    font-size: 3.6rem
+    font-weight: bolder
+    color: $orange
+    float: left
+    display: inline-block
+    margin: 5px 5px 5px 0
+  &-note
+   font-style: italic
+   margin-left: 5.2rem
+   padding-left: 2rem
+   border-left: 8px solid $orange
+  &-paragraph
+   margin-bottom: 2.6rem
+ .row
+  .col-12
+   margin-top: 2.4rem
+
+.widget-sidebar
+ margin-bottom: 3.6rem
+ .subtitle
+  margin-bottom: 2rem
+  h3
+   font-size: 18px
+   font-weight: normal
+
+.about
+ p
+  font-size: 12px
+  font-family: 'Helvetica'
+  color: $text
+
+.categories
+ &-filter
+  ul
+   list-style: none
+   padding: 0
+   li
+    margin-bottom: 3px
+    a
+     font-family: 'Helvetica'
+     color: $text
+     font-size: 12px
+     &:hover
+      text-decoration: underline
+
+.contact-form
+ margin-top: 3.8rem
+ display: flex
+ .description
+  font-family: 'Helvetica'
+  width: 20%
+  margin-right: 3.4rem
+  .about
+   font-size: 12px
+   margin-bottom: 1.5rem
+  .adress
+   font-size: 12px
+   margin-bottom: 1.5rem
+   span
+    font-weight: bolder
+    color: $orange
+    display: block
+  .contact
+   margin-bottom: 15px
+   a
+    display: block
+    font-size: 12px
+    color: $text
+    margin-bottom: 0.3rem
+    &:hover
+     text-decoration: underline
+ form
+  display: flex
+  flex-direction: column
+  font-family: 'Helvetica'
+  width: 100%
+  *:focus
+   outline: 0
+  input
+   margin-bottom: 1rem
+   border-color: $orange
+   border-style: solid
+   padding: 1.1rem 1.3rem
+   width: 50%
+   &::placeholder
+    color: $orange
+    font-family: 'Bebas'
+  textarea
+   margin-bottom: 1rem
+   border-color: $orange
+   border-style: solid
+   border-width: 2px
+   padding: 1.1rem 1.3rem
+   resize: none
+   &::placeholder
+    color: $orange
+    font-family: 'Bebas'
+  input[type="submit"]
+   border: none
+   background-color: $orange
+   color: $white
+   font-family: 'Bebas'
+   font-weight: normal
+   font-size: 12px
+   width: 60px
+   cursor: pointer
+
+.article
+ position: relative
+ &-link
+  display: block
+ .subtitle
+  height: 1.3rem
+  margin-top: 2.5rem
+ .icon
+  position: absolute
+  left: -8.5em
+  width: 7.5em
+  height: 7.5rem
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $orange
+  color: $white
+  i
+   font-size: 30px
+ img
+  width: 100%
+ &-wrap
+  font-family: 'Helvetica'
+  display: flex
+  .description
+   h2
+    font-family: 'Bebas'
+    font-size: 1.8rem
+    color: $orange
+    margin-bottom: 2.4rem
+   p
+    font-size: 1.2rem
+    color: $text
+    margin-bottom: 2.6rem
+  .inform
+   margin-top: 2.5rem
+   min-width: 20% 
+   display: flex
+   flex-direction: column
+   &__description
+    margin-bottom: 1.8rem
+    color: $grey-text
+    font-size: 1.2rem
+    a
+     color: $grey-text
+     &:hover
+      text-decoration: underline
+   &__headline
+    font-family: 'Bebas'
+    font-size: 1.6rem
+    color: $orange
+    margin-bottom: .8rem
+  .description
+   margin-top: 2.5rem
+
+@import "media"

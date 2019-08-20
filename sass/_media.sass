@@ -1,0 +1,69 @@
+@media (max-width: 767px)
+ .contact-form
+  flex-wrap: wrap
+  .description
+   width: 100%
+   margin-bottom: 2rem
+ html
+  font-size: 8px
+ header
+  .col
+   position: static
+ nav
+  ul
+   position: absolute
+   top: 82px
+   left: 0
+   flex-direction: column
+   width: 100vw
+   height: 0px
+   z-index: 100
+   border-top: 1px solid transparent
+   background: url(../img/bg.png)
+   overflow: hidden
+   transition: height .3s cubic-bezier(.72,.51,.75,.45) .1s, border-top-color .3s cubic-bezier(.72,.44,.71,.28) .2s 
+   .active
+    border-bottom-color: $orange
+    a
+     font-size: 18px
+   li
+    height: 44px
+    width: 80%
+    max-width: 400px
+    border-bottom: 1px solid $grey-text
+    transition: .2s ease-in
+    cursor: pointer
+    padding: 0
+    &:hover
+     border-bottom-color: $orange
+     a
+      color: $orange !important
+      font-size: 18px
+    a
+     margin: 0
+     padding: 0
+     height: 100%
+     width: 100%
+     display: flex
+     align-items: center
+ .active-scroll
+  header, .recent, .features, .layout
+   overflow-y: scroll
+   &::-webkit-scrollbar
+    z-index: 0
+ .active-menu
+  overflow-y: hidden
+  nav
+   ul
+    height: calc(100vh - 83px)
+    border-top-color: $grey-text
+   .humb
+    margin-bottom: 2px
+    span
+     background-color: transparent
+     transform: translateY(-2px) rotateY(180deg)
+     height: 0
+     &:after
+      transform: rotate(-45deg) 
+     &:before
+      transform: translateY(2px) rotate(45deg)
